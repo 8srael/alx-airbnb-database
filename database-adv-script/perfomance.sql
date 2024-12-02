@@ -26,6 +26,8 @@ LEFT JOIN
     payments py ON b.booking_id = py.booking_id
 WHERE 
     b.status = 'confirmed'
+    AND b.start_date >= '2024-01-01' 
+    AND b.end_date <= '2024-12-31'
 ORDER BY 
     b.start_date DESC;
 
@@ -58,7 +60,9 @@ EXPLAIN
     LEFT JOIN 
         payments py ON b.booking_id = py.booking_id
     WHERE 
-        b.status = 'confirmed'
+        b.status = 'confirmed' AND
+        b.start_date >= '2024-01-01' AND
+        b.end_date <= '2024-12-31'
     ORDER BY 
         b.start_date DESC;
 
@@ -118,6 +122,8 @@ JOIN
 LEFT JOIN 
     payments py ON b.booking_id = py.booking_id
 WHERE 
-    b.status = 'confirmed'
+    b.status = 'confirmed' AND
+    b.start_date >= '2024-01-01' AND
+    b.end_date <= '2024-12-31'
 ORDER BY 
     b.start_date DESC;
