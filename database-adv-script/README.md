@@ -16,3 +16,6 @@
 
 ## Task 4. Optimize Complex Queries
 *Objective*: Optimize complex queries using CTEs and window functions.
+
+## Task 5. Partitioning Large Tables
+*Objective*: Implement table partitioning to improve query performance.
